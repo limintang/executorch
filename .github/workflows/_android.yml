@@ -70,6 +70,7 @@ jobs:
         shell: bash
         run: |
           set -eux
+          curl -O https://gha-artifacts.s3.amazonaws.com/${{ github.repository }}/${{ github.run_id }}/artifacts/llm_demo/app-debug.apk
           curl -O https://gha-artifacts.s3.amazonaws.com/${{ github.repository }}/${{ github.run_id }}/artifacts/llm_demo/app-debug-androidTest.apk
           # TODO: Either export, or use persistent storage
           curl -O https://gha-artifacts.s3.amazonaws.com/${{ github.repository }}/11395155337/artifacts/stories110M_xnnpack/model.zip

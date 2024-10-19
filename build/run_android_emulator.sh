@@ -18,8 +18,7 @@ $ADB_PATH wait-for-device shell 'while [[ -z $(getprop sys.boot_completed) ]]; d
 echo "List all running emulators"
 $ADB_PATH devices
 
-# TODO: Run tests on emulator here, atm the script only boots up the emulator
-# and exits without doing anything yet
+adb install -t app-debug.apk
 adb install -t app-debug-androidTest.apk
 
 adb shell mkdir -p /data/local/tmp/llama
